@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Guess The Word Game</title>
+  <link rel="stylesheet" href="./index.css" />
+
+
+</head>
+
+<body>
+
+  <script src="./index.js"></script>
+
+  <div class="container">
+    <!-- Start Screen -->
+     
+    <div id="start-screen" class="screen active">
+      <h1>🎯 Guess The Word</h1>
+      <p>Unscramble the letters, learn meanings, and score high!</p>
+      <button onclick="showScreen('level-screen')">Start Game</button>
+    </div>
+
+    <!-- Level Selection -->
+    <div id="level-screen" class="screen">
+      <h2>Select Difficulty</h2>
+      <button onclick="startGame('beginner')">Beginner</button>
+      <button onclick="startGame('moderate')">Moderate</button>
+      <button onclick="startGame('advanced')">Advanced</button>
+    </div>
+
+    <!-- Game Screen -->
+    <div id="game-screen" class="screen">
+      <div class="info-bar">
+        <span>⏰ Time: <b id="time">60</b>s</span>
+        <span>⭐ Score: <b id="score">0</b></span>
+      </div>
+      <div class="progress-bar">
+        <div id="progress" class="progress-fill"></div>
+      </div>
+      <h3 id="level-title"></h3>
+      <div id="scrambled-word" class="word-box"></div>
+      <input type="text" id="user-input" placeholder="Enter your guess..." />
+      <div>
+        <button onclick="checkAnswer()">Check</button>
+        <button onclick="showHint()">Hint💡</button>
+      </div>
+      <p id="hint" style="color: #555; font-style: italic"></p>
+      <p id="meaning" style="font-size: 14px; color: #777"></p>
+      <button onclick="nextWord()">Next ➜</button>
+    </div>
+
+    <!-- Result Screen -->
+    <div id="result-screen" class="screen">
+      <h2>🎉 Level Completed!</h2>
+      <p>Your Final Score:</p>
+      <div id="final-score">0</div>
+      <p id="feedback-msg"></p>
+      <button onclick="showScreen('level-screen')">Play Again</button>
+      <button onclick="showScreen('start-screen')">Exit</button>
+    </div>
+  </div>
+
+
+</body>
+
+</html>

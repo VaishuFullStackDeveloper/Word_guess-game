@@ -1,0 +1,129 @@
+
+      /* GLOBAL STYLES  */
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: "Poppins", sans-serif;
+      }
+      body {
+        background: linear-gradient(135deg, #89f7fe, #66a6ff);
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      
+      /* CONTAINER  */
+      .container {
+        width: 500px;
+        max-width: 90%;
+        background: #fff;
+        border-radius: 25px;
+        box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+        text-align: center;
+        padding: 30px;
+        transition: all 0.3s ease;
+      }
+      .screen {
+        display: none;
+      }
+      .active {
+        display: block;
+      }
+
+      /* TEXT */
+      h1,
+      h2,
+      h3 {
+        color: #3737cc;
+        margin-bottom: 15px;
+      }
+      p {
+        color: #444;
+        margin-bottom: 10px;
+      }
+
+      /* BUTTONS  */
+      button {
+        background: #3737cc;
+        color: white;
+        border: none;
+        padding: 12px 22px;
+        border-radius: 12px;
+        margin: 10px 5px;
+        cursor: pointer;
+        font-size: 16px;
+        transition: 0.3s;
+      }
+      button:hover {
+        background: #2626b8;
+      }
+
+      /*  INPUT  */
+      input {
+        width: 80%;
+        padding: 12px;
+        border-radius: 10px;
+        border: 1px solid #aaa;
+        font-size: 16px;
+        text-align: center;
+        margin-top: 10px;
+      }
+
+      /*  WORD & INFO  */
+      .word-box {
+        font-size: 30px;
+        letter-spacing: 4px;
+        margin: 20px 0;
+        font-weight: 600;
+        color: #222;
+      }
+      .info-bar {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 8px;
+        font-size: 15px;
+        color: #333;
+      }
+      .progress-bar {
+        height: 8px;
+        background: #ddd;
+        border-radius: 10px;
+        overflow: hidden;
+        margin-bottom: 10px;
+      }
+      .progress-fill {
+        height: 100%;
+        width: 100%;
+        background: linear-gradient(90deg, #3737cc, #66a6ff);
+        transition: width 1s linear;
+      }
+
+      /*  RESULT */
+      #final-score {
+        font-size: 30px;
+        color: #3737cc;
+        font-weight: bold;
+        margin: 10px 0;
+      }
+
+      /*  ANIMATIONS  */
+      .correct {
+        animation: pop 0.5s ease;
+      }
+      @keyframes pop {
+        0% {
+          transform: scale(1);
+        }
+        50% {
+          transform: scale(1.2);
+        }
+        100% {
+          transform: scale(1);
+        }
+      }
+
+
+    
